@@ -13,4 +13,3 @@
   - [] visualizzazione dello storico in una tabella  
   - [] visualizzazione con un grafico (https://www.chartjs.org/docs/latest/ ma libertà  di scelta)
   - [] layout HTML e grafica (uikit, .... libertà di scelta)
-   

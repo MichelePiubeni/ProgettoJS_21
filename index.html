@@ -4,26 +4,63 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
+	<title>Sensori</title>
+
 	<!-- UIkit CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
 
 	<!-- UIkit JS -->
 	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js">
-
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit-icons.min.js">
-
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js">
+	</script>
+
 	<link href="style.css" rel="stylesheet" type="text/css" />
+
+	<title>Sensori</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/uikit.min.css" />
+	<script src="js/uikit.min.js">
+	</script>
+	<script src="js/uikit-icons.min.js">
+	</script>
+
 </head>
 
 <body>
-	<div class="uk-container uk-container-large">
-		<div id="debug">tyctutucftyty</div>
+	<div>
+		<canvas id="myChart"></canvas>
 	</div>
-	<script src="sensori.js"></script>
-	<script src="script.js"></script>
-</body>
+	<div class="uk-container uk-container-large">
+		<div>
+			<pre id="debug"></pre>
+			<pre id="value"></pre> Valori sensori
+			<pre id="Storico"></pre> Sensori di sola lettura
+			<!--Sensore id: temperatura-01-->
+			<pre id="typeSensor1"></pre>
+			<!--Sensore id: umidità-01-->
+			<pre id="typeSensor2"></pre>
+			<!--Sensore id: cleancode-01-->
+			<pre id="typeSensor3"></pre>
+			<!--Sensore id: luce-01-->
+			<pre id="typeSensor4"></pre>
+      <pre id="type"></pre>
+		</div>
+		<p>Premi per aggiornare</p>
+		<button id="btnAggiorna" style="background-color:blue" class="uk-button uk-button-default uk-button-danger">Aggiorna</button>
+    <p>Premi il bottone per modificare un sensore tramite id</p>
+  
+    <p class="id">ID: <input type="text" id="ID"> </p>
+        <button id="btnModifica" style="background-color:blue" onclick="Modifica()" class="uk-button uk-button-default uk-button-danger">Modifica</button>
+	</div>
 
+	<script src="script.js"></script>
+
+<A HREF="javascript:history.go(0)">Clicca per il refresh della pagina</A>
+<canvas id="myChart" width="400" height="400"></canvas>
+
+</body>
 </html>
