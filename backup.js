@@ -12,9 +12,6 @@ var storico = []
 let j = 0
 var interval;
 
-
-
-
 //fetch("https://python-iot-sim.professorandrea.repl.co")
 //https://python-iot-sim.professorandrea.repl.co
 fetch("https://hf3xzw.deta.dev/")
@@ -27,7 +24,6 @@ fetch("https://hf3xzw.deta.dev/")
       read = JSON.stringify(body.sensors[i].readonly, null, 2)
       
       type = type + JSON.stringify(body.sensors[i].description, null, 2)
-      //}
       if (i >= 4) {
         storico[j] = "<br>" + JSON.stringify(body.sensors[i].value, null, 2)
         j++
@@ -84,9 +80,6 @@ fetch("https://hf3xzw.deta.dev/")
         }
       }
     });
-
-
-
   })
 
 const btnAggiorna = document.getElementById("btnAggiorna")
@@ -96,7 +89,6 @@ btnAggiorna.onclick = () => {
   //interval = setTimeout(function() { reload(); }, 1000);
   //clearInterval(interval)
 //}
-
 
 /*function reload () {*/
   fetch("https://hf3xzw.deta.dev/")
@@ -122,7 +114,6 @@ btnAggiorna.onclick = () => {
         typeSensor3Value = JSON.stringify(body.sensors[6].value, null, 2)
         typeSensor4Value = JSON.stringify(body.sensors[7].value, null, 2)
 
-        //}
       }
       document.getElementById("debug").innerHTML = JSON.stringify(body, null, 2)
       
@@ -131,7 +122,6 @@ btnAggiorna.onclick = () => {
       document.getElementById("typeSensor2").innerHTML = typeSensor2
       document.getElementById("typeSensor3").innerHTML = typeSensor3
       document.getElementById("typeSensor4").innerHTML = typeSensor4
-
 
       const ctx = document.getElementById('myChart').getContext('2d');
       const myChart = new Chart(ctx, {
@@ -168,11 +158,8 @@ btnAggiorna.onclick = () => {
           }
         }
       });
-
-
     })
 }
-
 /*function reload(){
   fetch("https://hf3xzw.deta.dev/")
   .then(r => r.json())
@@ -242,7 +229,6 @@ btnAggiorna.onclick = () => {
     });
   })
 }*/
-
 
 function modifica() {
   let ID = parseInt(document.getElementById('ID').value)

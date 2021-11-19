@@ -87,9 +87,6 @@ fetch("https://hf3xzw.deta.dev/")
         }
       }
     });
-
-
-
   })
 
 const btnAggiorna = document.getElementById("btnAggiorna")
@@ -98,7 +95,6 @@ btnAggiorna.onclick = () => {
     .then(r => r.json())
     .then(body => {
       console.log(body)
-     
       let read = ""
       for (i = 0; i < body.sensors.length; i++) {
         read = JSON.stringify(body.sensors[i].readonly, null, 2)
@@ -172,7 +168,6 @@ function reload() {
       let read = ""
       for (i = 0; i < body.sensors.length; i++) {
         read = JSON.stringify(body.sensors[i].readonly, null, 2)
-       
         type = type + JSON.stringify(body.sensors[i].description, null, 2)
         //}
         if (i >= 4) {
@@ -233,7 +228,6 @@ function reload() {
     })
 }
 
-
 //Aggiornamento dei dati con un timer
 /*btnAggiorna.onclick = () => {
   console.log("click")
@@ -270,7 +264,6 @@ function reload() {
         document.getElementById("typeSensor2").innerHTML = typeSensor2
         document.getElementById("typeSensor3").innerHTML = typeSensor3
         document.getElementById("typeSensor4").innerHTML = typeSensor4
-
 
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
