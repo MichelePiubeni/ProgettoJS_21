@@ -169,7 +169,6 @@ function reload() {
       for (i = 0; i < body.sensors.length; i++) {
         read = JSON.stringify(body.sensors[i].readonly, null, 2)
         type = type + JSON.stringify(body.sensors[i].description, null, 2)
-        //}
         if (i >= 4) {
           storico[j] = "<br>" + JSON.stringify(body.sensors[i].value, null, 2)
           j++
