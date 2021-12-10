@@ -1,3 +1,4 @@
+//è solo un backup si puo anche togliere
 const debug = document.getElementById("debug")
 const type = document.getElementById("type")
 var typeSensor1 = document.getElementById("typeSensor1")
